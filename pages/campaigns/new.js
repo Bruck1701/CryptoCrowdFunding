@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import { Form, Button, Input, Message } from "semantic-ui-react";
 import contractInstance from "../../ethereum/factory";
 import { ethers } from "ethers";
+import { Router } from "../../routes";
 
 class CampaignNew extends Component {
   state = {
@@ -34,6 +35,8 @@ class CampaignNew extends Component {
         await contractConnection.functions.createCampaign(
           this.state.minimumContribution
         );
+
+        Router.pushRoute("/");
       } catch (err) {
         this.setState({ errorMessage: err.message });
       }
