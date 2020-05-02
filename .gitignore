@@ -1,0 +1,8 @@
+node_modules/
+.old_code
+ethereum/.env
+.env
+.next
+.env.build
+ethereum/build/*
+pages/semantic/*
