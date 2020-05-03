@@ -5,7 +5,7 @@ export default (address) => {
   const abi = Campaign.abi;
   let provider;
 
-  console.log(address);
+  //console.log(address);
 
   if (typeof window !== "undefined" && window.web3 !== "undefined") {
     //running on the browser not on the server and user has metamask installed
