@@ -4,7 +4,7 @@ import CampaignFactory from "./build/CampaignFactory.json";
 
 let contractInstance;
 let provider;
-const contractAddress = "0x360D1B8A931FF6032CF1B74eda7D67D637691b87";
+const contractAddress = "0x10f6F85FA43AAad238f53d7c96B91A50a5f1D000";
 const abi = CampaignFactory.abi;
 
 if (typeof window !== "undefined" && window.web3 !== "undefined") {
