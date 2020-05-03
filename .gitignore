@@ -6,3 +6,4 @@ ethereum/.env
 .env.build
 ethereum/build/*
 pages/semantic/*
+ethereum/ADDRESS
