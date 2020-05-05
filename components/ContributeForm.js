@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ethers } from "ethers";
 import { Form, Input, Button, Message } from "semantic-ui-react";
 import Campaign from "../ethereum/campaign";
+import { Router } from "../routes";
 
 class ContributeForm extends Component {
   state = {
@@ -19,9 +20,9 @@ class ContributeForm extends Component {
 
       this.setState({ loading: true, errorMessage: "" });
       const provider = new ethers.providers.Web3Provider(web3.currentProvider);
-      console.log(provider);
+      //console.log(provider);
       const signer = provider.getSigner(0);
-      console.log(signer);
+      //console.log(signer);
 
       const campaign = Campaign(this.props.address);
       const contractConnection = campaign.connect(signer);
@@ -35,7 +36,9 @@ class ContributeForm extends Component {
       this.setState({ errorMessage: err.message });
       //console.log("User has denied access to metamask");
     }
+
     this.setState({ loading: false });
+    Router.replaceRoute(`/campaigns/${this.props.address}`);
   };
 
   render() {
@@ -53,7 +56,7 @@ class ContributeForm extends Component {
           />
         </Form.Field>
 
-        <Message error header="Error" content={this.state.errorMessage} />
+        <Message error header="Error!" content={this.state.errorMessage} />
 
         <Button loading={this.state.loading} primary>
           Contribute
