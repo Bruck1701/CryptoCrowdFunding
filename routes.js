@@ -4,6 +4,8 @@ const routes = require("next-routes")();
 // : symbolizes wildcard
 routes
   .add("/campaigns/new", "/campaigns/new")
-  .add("/campaigns/:address", "/campaigns/show");
+  .add("/campaigns/:address", "/campaigns/show")
+  .add("/campaigns/:address/requests", "/campaigns/requests/listRequests")
+  .add("/campaigns/:address/requests/new", "/campaigns/requests/newRequest");
 
 module.exports = routes;
