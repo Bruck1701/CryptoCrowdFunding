@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import Layout from "../../components/layout";
 import Campaign from "../../ethereum/campaign";
-import { Card, Grid } from "semantic-ui-react";
+import { Card, Grid, Button } from "semantic-ui-react";
 import { ethers } from "ethers";
 import ContributeForm from "../../components/ContributeForm";
+import { Link } from "../../routes";
 
 class CampaignShow extends Component {
   static async getInitialProps(props) {
     const campaign = Campaign(props.query.address);
     const summary = await campaign.functions.getSummary();
-    console.log(summary[1].toString());
+    //console.log(summary[1].toString());
 
     return {
       address: props.query.address,
@@ -76,6 +77,15 @@ class CampaignShow extends Component {
             <Grid.Column width={12}>{this.renderCards()}</Grid.Column>
             <Grid.Column width={4}>
               <ContributeForm address={this.props.address} />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <Link route={`/campaigns/${this.props.address}/requests`}>
+                <a>
+                  <Button primary> View Requests </Button>
+                </a>
+              </Link>
             </Grid.Column>
           </Grid.Row>
         </Grid>
