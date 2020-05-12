@@ -3,7 +3,6 @@ node_modules/
 ethereum/.env
 .env
 .env.build
-ethereum/build/*
 pages/semantic/*
 ethereum/ADDRESS
 .next
