@@ -3,6 +3,14 @@ import { Menu } from "semantic-ui-react";
 import { Link } from "../routes";
 
 export default () => {
+
+  const getWidth = () => {
+    const isSSR = typeof window === 'undefined'
+  
+    return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
+  }
+
+
   return (
     <Menu style={{ marginTop: "15px" }}>
       <Link route="/">
