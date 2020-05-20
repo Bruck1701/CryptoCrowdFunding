@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import contractInstance from "../ethereum/factory";
 import { Card, Button } from "semantic-ui-react";
-import Layout from "../components/layout";
+import Layout from "../components/indexlayout";
 import { Link } from "../routes";
 
 class CampaignIndex extends Component {
@@ -11,7 +11,7 @@ class CampaignIndex extends Component {
   }
 
   renderCampaigns() {
-    const items = this.props.campaigns.map((address) => {
+    const items = this.props.campaigns.map(address => {
       return {
         header: address,
         description: (
@@ -19,7 +19,7 @@ class CampaignIndex extends Component {
             <a>View Campaign</a>
           </Link>
         ),
-        fluid: true,
+        fluid: true
       };
     });
 

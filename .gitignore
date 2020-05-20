@@ -6,3 +6,5 @@ ethereum/.env
 pages/semantic/*
 ethereum/ADDRESS
 .next
+.gitignore
+
