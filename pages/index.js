@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import contractInstance from "../ethereum/factory";
 import { Card, Button } from "semantic-ui-react";
-import Layout from "../components/indexlayout";
+import Layout from "../components/indexLayout";
 import { Link } from "../routes";
 
 class CampaignIndex extends Component {

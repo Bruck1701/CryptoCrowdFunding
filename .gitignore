@@ -5,6 +5,7 @@ ethereum/.env
 .env.build
 pages/semantic/*
 ethereum/ADDRESS
+ethereum/build/*
 .next
 .gitignore
 
