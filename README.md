@@ -9,3 +9,4 @@ their campaigns.
 
 The platform is running on the Rinkeby test network and is planned to be migrated to the Main Ethereum Network as soon as it has been thoroughly tested. 
 
+currently hosted at: https://crypto-crowd-funding.herokuapp.com/ 
