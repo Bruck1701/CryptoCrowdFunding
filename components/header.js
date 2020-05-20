@@ -6,13 +6,13 @@ export default () => {
 
   const getWidth = () => {
     const isSSR = typeof window === 'undefined'
-  
     return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
   }
 
 
   return (
     <Menu style={{ marginTop: "15px" }}>
+      
       <Link route="/">
         <a className="item">CryptoCrowdFunding</a>
       </Link>
@@ -25,6 +25,7 @@ export default () => {
         <Link route="/campaigns/new">
           <a className="item">+</a>
         </Link>
+
       </Menu.Menu>
     </Menu>
   );

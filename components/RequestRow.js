@@ -5,12 +5,16 @@ import { Table, Button } from "semantic-ui-react";
 
 class RequestRow extends Component {
   approveRequest = async () => {
+
+
     const provider = new ethers.providers.Web3Provider(web3.currentProvider);
 
     const campaign = Campaign(this.props.address);
     const signer = provider.getSigner(0);
     const campaignConnection = campaign.connect(signer);
     await campaignConnection.functions.aproveRequest(this.props.id);
+
+    
   };
 
   endRequest = async () => {
