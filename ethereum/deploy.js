@@ -9,8 +9,6 @@ const contractAddress = null;
 
 const provider = ethers.getDefaultProvider("rinkeby");
 
-//console.log(process.env);
-
 const mnemonic = process.env.MNEMONIC;
 const privateKey = new ethers.Wallet.fromMnemonic(mnemonic).privateKey;
 
@@ -25,8 +23,9 @@ console.log("Wallet Address: " + wallet.address);
 
   // The address the Contract WILL have once mined
   // See: https://rinkeby.etherscan.io/address/<Contractaddress>
+
   console.log("Contract Address:", contract.address);
-  // >>> 0x360D1B8A931FF6032CF1B74eda7D67D637691b87
+
   // The transaction that was sent to the network to deploy the Contract
   // See: https://rinkeby.etherscan.io/tx/<trasnsactionHash>
   console.log("Transaction Hash:", contract.deployTransaction.hash);

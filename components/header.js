@@ -1,15 +1,31 @@
 import React from "react";
 import { Menu } from "semantic-ui-react";
+import { Link } from "../routes";
 
 export default () => {
+
+  const getWidth = () => {
+    const isSSR = typeof window === 'undefined'
+    return isSSR ? Responsive.onlyTablet.minWidth : window.innerWidth
+  }
+
+
   return (
     <Menu style={{ marginTop: "15px" }}>
-      <Menu.Item>EthFunding</Menu.Item>
+      
+      <Link route="/">
+        <a className="item">CryptoCrowdFunding</a>
+      </Link>
 
       <Menu.Menu position="right">
-        <Menu.Item>Campaigns</Menu.Item>
+        <Link route="/">
+          <a className="item">Campaigns</a>
+        </Link>
 
-        <Menu.Item>+</Menu.Item>
+        <Link route="/campaigns/new">
+          <a className="item">+</a>
+        </Link>
+
       </Menu.Menu>
     </Menu>
   );

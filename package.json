@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
     "dev": "node server.js"
   },
   "author": "Bruck1701",
