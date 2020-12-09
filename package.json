@@ -14,9 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "elliptic": "^6.5.3",
     "ethers": "^4.0.48",
     "fs-extra": "^9.0.1",
     "ganache-cli": "^6.12.1",
+    "http-proxy": "^1.18.1",
     "lodash": "^4.17.20",
     "mocha": "^7.2.0",
     "next": "^9.5.5",
@@ -25,6 +27,7 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "semantic-ui-react": "^0.88.2",
+    "serialize-javascript": "^5.0.1",
     "solc": "^0.6.12"
   }
 }
