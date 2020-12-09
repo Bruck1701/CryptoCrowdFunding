@@ -14,16 +14,16 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "ethers": "^4.0.46",
-    "fs-extra": "^9.0.0",
+    "ethers": "^4.0.48",
+    "fs-extra": "^9.0.1",
     "ganache-cli": "^6.12.1",
-    "mocha": "^7.1.1",
-    "next": "^9.3.2",
+    "mocha": "^7.2.0",
+    "next": "^9.5.5",
     "next-routes": "^1.4.2",
     "object-path": "^0.11.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "semantic-ui-react": "^0.88.2",
-    "solc": "^0.6.6"
+    "solc": "^0.6.12"
   }
 }

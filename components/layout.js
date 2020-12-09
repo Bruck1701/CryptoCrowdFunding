@@ -3,7 +3,7 @@ import Header from "./header";
 import { Container } from "semantic-ui-react";
 import Head from "next/head";
 
-export default (props) => {
+const Named =  (props) => {
   return (
     <Container>
       <Head>
@@ -17,3 +17,5 @@ export default (props) => {
     </Container>
   );
 };
+
+export default Named;
